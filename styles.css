@@ -506,21 +506,24 @@ section {
 
 .rev-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   border-radius: 26px;
-  overflow: hidden;
+  padding: clamp(18px, 3vw, 26px);
   scroll-snap-align: center;
-  aspect-ratio: 3 / 4;
-  background: linear-gradient(160deg, #1a1a22, #282832);
+  min-height: clamp(240px, 32vh, 360px);
+  background: linear-gradient(160deg, rgba(26, 26, 34, 0.95), rgba(40, 40, 50, 0.95));
+  color: var(--text-primary);
   box-shadow: var(--glow-soft);
   transition: transform var(--transition);
 }
 
-.rev-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  filter: contrast(1) saturate(.95);
+.rev-card p {
+  margin: 0;
+  font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(0.9rem, 1vw + 0.7rem, 1.05rem);
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 .rev-card:hover {
