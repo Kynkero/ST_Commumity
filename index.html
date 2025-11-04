@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ST Community — салон красоты и обучение наращиванию волос." />
   <title>ST Community — салон красоты и обучение</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,40 +14,48 @@
   <div class="page">
     <header class="nav">
       <a class="brand" href="#hero">
-        <img src="png/logo.PNG" alt="Логотип ST Community" />
-        <span>ST Community</span>
+        <img src="png/logo.PNG" alt="Логотип ST Community" data-i18n="brand.alt" data-i18n-attr="alt" />
+        <span data-i18n="brand.name">ST Community</span>
       </a>
       <nav class="menu">
-        <a href="#hero">Главная</a>
-        <a href="#path">Мой путь</a>
-        <a href="#courses">Курсы</a>
-        <a href="#reviews">Отзывы</a>
+        <a href="#hero" data-i18n="nav.home">Главная</a>
+        <a href="#path" data-i18n="nav.path">Мой путь</a>
+        <a href="#courses" data-i18n="nav.courses">Курсы</a>
+        <a href="#reviews" data-i18n="nav.reviews">Отзывы</a>
       </nav>
+      <div class="lang-switch">
+        <label for="langSelect" class="visually-hidden" data-i18n="lang.label">Выбор языка</label>
+        <select id="langSelect" aria-label="Language selector" data-i18n="lang.selector" data-i18n-attr="aria-label">
+          <option value="ru">Русский</option>
+          <option value="en">English</option>
+          <option value="lv">Latviešu</option>
+        </select>
+      </div>
     </header>
 
     <section id="hero" class="hero">
       <div class="hero-inner">
         <div class="hero-content">
-          <span class="hero-badge">эксперт по наращиванию волос</span>
-          <h1 class="title">ST Community</h1>
-          <p class="subtitle">Стань лучшей среди мастеров по наращиванию волос</p>
-          <p class="lead">Я <b>Svitlana Tishevska</b> — Уже более 6 лет я создаю безупречные образы и преображения, помогая девушкам почувствовать уверенность, лёгкость и красоту — не только внешнюю, но и внутреннюю.</p>
+          <span class="hero-badge" data-i18n="hero.badge">эксперт по наращиванию волос</span>
+          <h1 class="title" data-i18n="hero.title">ST Community</h1>
+          <p class="subtitle" data-i18n="hero.subtitle">Стань лучшей среди мастеров по наращиванию волос</p>
+          <p class="lead" data-i18n="hero.lead">Я <b>Svitlana Tishevska</b> — Уже более 6 лет я создаю безупречные образы и преображения, помогая девушкам почувствовать уверенность, лёгкость и красоту — не только внешнюю, но и внутреннюю.</p>
           <div class="card">
-            <b>Что ты получишь:</b>
+            <b data-i18n="hero.card.title">Что ты получишь:</b>
             <ul>
-              <li>чёткую методологию и поддержку наставника;</li>
-              <li>практику на реальных задачах и работу с образами;</li>
-              <li>сообщество мастеров и продвижение бренда.</li>
+              <li data-i18n="hero.card.item1">чёткую методологию и поддержку наставника;</li>
+              <li data-i18n="hero.card.item2">практику на реальных задачах и работу с образами;</li>
+              <li data-i18n="hero.card.item3">сообщество мастеров и продвижение бренда.</li>
             </ul>
           </div>
           <div class="cta">
-            <button class="btn btn-primary" type="button" data-scroll="#courses">Информация про обучение</button>
-            <button class="btn btn-ghost" type="button" data-scroll="#reviews">Смотреть отзывы</button>
+            <button class="btn btn-primary" type="button" data-scroll="#courses" data-i18n="hero.buttons.train">Информация про обучение</button>
+            <button class="btn btn-ghost" type="button" data-scroll="#reviews" data-i18n="hero.buttons.reviews">Смотреть отзывы</button>
           </div>
         </div>
         <div class="figure">
           <div class="halo" aria-hidden="true"></div>
-          <img class="hero-img" src="png/header.PNG" alt="Svitlana" />
+          <img class="hero-img" src="png/header.PNG" alt="Svitlana" data-i18n="hero.image.alt" data-i18n-attr="alt" />
         </div>
       </div>
     </section>
@@ -66,17 +75,17 @@
     <!-- Секция 3: Курсы и мастер‑классы -->
     <section id="courses" class="courses">
       <div class="courses-inner">
-        <h2 class="courses-title">Общее</h2>
+        <h2 class="courses-title" data-i18n="courses.title">Общее</h2>
         <!-- <h3 class="courses-sub">и про мастер‑классы</h3> -->
 
         <!-- Большая карточка курса -->
           <article class="course-feature">
             <div class="thumb">
-              <img src="png/Line/2.jpg" alt="Курс ПроМасштаб" />
+              <img src="png/Line/2.jpg" alt="Курс ПроМасштаб" data-i18n="courses.feature.image" data-i18n-attr="alt" />
             </div>
             <div class="feature-body">
-              <h3>Мой салон — место силы и вдохновения</h3>
-              <div class="desc">
+              <h3 data-i18n="courses.feature.title">Мой салон — место силы и вдохновения</h3>
+              <div class="desc" data-i18n="courses.feature.desc">
                 <p>Я — основатель и владелица собственного бьюти-салона, где каждая деталь продумана до мелочей.</p>
                 <p>Здесь всё создано с любовью: атмосфера, сервис, уют и внимание к каждой гостье.</p>
                 <p>Моя цель — чтобы каждая женщина, переступив порог, почувствовала:</p>
@@ -89,10 +98,10 @@
           <!-- Две карточки ниже -->
           <div class="course-grid">
             <article class="course-card">
-              <img src="png\png\Line\5.png" alt="Курс с нуля" />
+              <img src="png\png\Line\5.png" alt="Курс с нуля" data-i18n="courses.card1.image" data-i18n-attr="alt" />
               <div class="body">
-                <h4>Курс по наращиванию волос с нуля</h4>
-                <div class="desc">
+                <h4 data-i18n="courses.card1.title">Курс по наращиванию волос с нуля</h4>
+                <div class="desc" data-i18n="courses.card1.desc">
                   <p>2 дня — теория + практика на модели. Новый старт в профессии.</p>
 
                  <p><strong>День 1 — база и капсуляция</strong><br>
@@ -120,21 +129,21 @@
                  <p><em>Ближайшие даты и стоимость — в Direct</em></p>
  
                 </div>
-                <a href="https://www.instagram.com/hairext_svitlana/" target="_blank" class="btn btn-primary">Подробнее</a>
+                <a href="https://www.instagram.com/hairext_svitlana/" target="_blank" class="btn btn-primary" data-i18n="courses.card1.cta">Подробнее</a>
               </div>
             </article>
 
             <article class="course-card">
-              <img src="png/Line/3.jpg" alt="Повышение квалификации" />
+              <img src="png/Line/3.jpg" alt="Повышение квалификации" data-i18n="courses.card2.image" data-i18n-attr="alt" />
               <div class="body">
-                <h4>Обучение и вдохновение</h4>
-                <div class="desc">
+                <h4 data-i18n="courses.card2.title">Обучение и вдохновение</h4>
+                <div class="desc" data-i18n="courses.card2.desc">
                   <p>Помимо практики, я обучаю мастеров в Риге и по всей Европе. Мои авторские курсы по наращиванию волос проходят в Латвии, а также на Мальте, Канарских островах и других европейских локациях.</p>
                   <p>Я делюсь не только техниками и опытом, но и философией профессии — вниманием к деталям, чувством вкуса, уверенностью и любовью к своему делу.</p>
                   <p>В 2025 году я достигла важной профессиональной вершины — стала судьёй на международном чемпионате по наращиванию волос Level Up Champion в Берлине. Этот опыт стал подтверждением моего экспертного уровня и глубокого понимания индустрии.</p>
                   <p>Мои ученицы уже строят собственные бренды, и уверенно развиваются в бьюти-сфере, вдохновляя других своим примером.</p>
                 </div>
-                <a href="https://www.instagram.com/hairext_svitlana/" target="_blank" class="btn btn-primary">Подробнее</a>
+                <a href="https://www.instagram.com/hairext_svitlana/" target="_blank" class="btn btn-primary" data-i18n="courses.card2.cta">Подробнее</a>
               </div>
             </article>
         </div>
@@ -145,7 +154,7 @@
     <!-- Секция 4: Отзывы -->
     <section id="reviews" class="reviews">
       <div class="reviews-inner">
-        <h2 class="reviews-title">Отзывы</h2>
+        <h2 class="reviews-title" data-i18n="reviews.title">Отзывы</h2>
         <div class="reviews-viewport">
             <div class="reviews-track" id="reviewsTrack">
               <div class="rev-card">
@@ -206,10 +215,10 @@
               </div>
             </div>
             <div class="rev-nav">
-              <button class="rev-btn rev-prev" aria-label="Назад" id="revPrev">
+            <button class="rev-btn rev-prev" aria-label="Назад" id="revPrev" data-i18n="reviews.nav.prev" data-i18n-attr="aria-label">
               <svg viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
             </button>
-            <button class="rev-btn rev-next" aria-label="Вперёд" id="revNext">
+            <button class="rev-btn rev-next" aria-label="Вперёд" id="revNext" data-i18n="reviews.nav.next" data-i18n-attr="aria-label">
               <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
             </button>
           </div>
@@ -220,28 +229,29 @@
  <!-- Секция 5: Результаты учениц -->
     <section id="results" class="results">
       <div class="results-inner">
-        <h2 class="results-title">Результаты учениц</h2>
+        <h2 class="results-title" data-i18n="results.title">Результаты учениц</h2>
         <div class="results-grid">
             <article class="result-card">
-              <img src="png\png\IMG_9335.jpg" alt="Bohdana"/>
+              <img src="png\png\IMG_9335.jpg" alt="Bohdana" data-i18n="results.card1.image" data-i18n-attr="alt"/>
             <div class="result-body">
               <h4 class="result-name">Bohdana Horiacha</h4>
-              <p class="result-text"><p class="result-text">
-Прошла обучение в <strong>ST Community</strong>, где получила не только глубокие знания и уверенные практические навыки, но и вдохновение двигаться вперёд. Сейчас Bohdana работает в том же салоне, где проходила стажировку, и с теплотой вспоминает свои первые шаги.  
-Каждый день она чувствует, что занимается любимым делом, и благодарит команду ST Community за поддержку, атмосферу и возможность стать частью большого профессионального сообщества.
-</p></p>
+              <div class="result-text" data-i18n="results.card1.text">
+                <p>Прошла обучение в <strong>ST Community</strong>, где получила не только глубокие знания и уверенные практические навыки, но и вдохновение двигаться вперёд. Сейчас Bohdana работает в том же салоне, где проходила стажировку, и с теплотой вспоминает свои первые шаги.</p>
+                <p>Каждый день она чувствует, что занимается любимым делом, и благодарит команду ST Community за поддержку, атмосферу и возможность стать частью большого профессионального сообщества.</p>
+              </div>
               <div class="result-tags">
               </div>
             </div>
           </article>
 
             <article class="result-card">
-              <img src="png\png\2.jpg" alt="Alona" />
+              <img src="png\png\2.jpg" alt="Alona" data-i18n="results.card2.image" data-i18n-attr="alt" />
             <div class="result-body">
               <h4 class="result-name">Alona Dunaja</h4>
-              <p class="result-text"><p class="result-text">
-Прошла обучение в <strong>ST Community</strong> и с первого дня влюбилась в профессию. Полученные знания и уверенность вдохновили её открыть собственный бьюти-салон, где она реализует себя как мастер и предприниматель.</p>  
-Сегодня Alona с гордостью управляет своим делом, создаёт красоту с душой и вниманием к каждой детали, а её клиенты всегда уходят счастливыми и возвращаются снова.</p>
+              <div class="result-text" data-i18n="results.card2.text">
+                <p>Прошла обучение в <strong>ST Community</strong> и с первого дня влюбилась в профессию. Полученные знания и уверенность вдохновили её открыть собственный бьюти-салон, где она реализует себя как мастер и предприниматель.</p>
+                <p>Сегодня Alona с гордостью управляет своим делом, создаёт красоту с душой и вниманием к каждой детали, а её клиенты всегда уходят счастливыми и возвращаются снова.</p>
+              </div>
               <div class="result-tags">
               </div>
             </div>
@@ -264,21 +274,228 @@
 
     <script>
       (function(){
+        const translations = {
+          ru: {
+            'meta.title': 'ST Community — салон красоты и обучение',
+            'meta.description': 'ST Community — салон красоты и обучение наращиванию волос.',
+            'brand.alt': 'Логотип ST Community',
+            'brand.name': 'ST Community',
+            'nav.home': 'Главная',
+            'nav.path': 'Мой путь',
+            'nav.courses': 'Курсы',
+            'nav.reviews': 'Отзывы',
+            'lang.label': 'Выбор языка',
+            'lang.selector': 'Выбор языка',
+            'hero.badge': 'эксперт по наращиванию волос',
+            'hero.title': 'ST Community',
+            'hero.subtitle': 'Стань лучшей среди мастеров по наращиванию волос',
+            'hero.lead': 'Я <b>Svitlana Tishevska</b> — Уже более 6 лет я создаю безупречные образы и преображения, помогая девушкам почувствовать уверенность, лёгкость и красоту — не только внешнюю, но и внутреннюю.',
+            'hero.card.title': 'Что ты получишь:',
+            'hero.card.item1': 'чёткую методологию и поддержку наставника;',
+            'hero.card.item2': 'практику на реальных задачах и работу с образами;',
+            'hero.card.item3': 'сообщество мастеров и продвижение бренда.',
+            'hero.buttons.train': 'Информация про обучение',
+            'hero.buttons.reviews': 'Смотреть отзывы',
+            'hero.image.alt': 'Svitlana — мастер по наращиванию волос',
+            'courses.title': 'Общее',
+            'courses.feature.image': 'Интерьер салона ST Community',
+            'courses.feature.title': 'Мой салон — место силы и вдохновения',
+            'courses.feature.desc': '<p>Я — основатель и владелица собственного бьюти-салона, где каждая деталь продумана до мелочей.</p><p>Здесь всё создано с любовью: атмосфера, сервис, уют и внимание к каждой гостье.</p><p>Моя цель — чтобы каждая женщина, переступив порог, почувствовала:</p><p>✨ «Здесь обо мне действительно заботятся».</p>',
+            'courses.card1.image': 'Курс по наращиванию волос с нуля',
+            'courses.card1.title': 'Курс по наращиванию волос с нуля',
+            'courses.card1.desc': '<p>2 дня — теория + практика на модели. Новый старт в профессии.</p><p><strong>День 1 — база и капсуляция</strong><br>• Типы волос, качество, выбор поставщика<br>• Техники: капсулы, ленты, микро, нано<br>• Инструменты мастера без переплат<br>• Консультация клиента, подбор цвета<br>• 3 формата капсуляции: стандарт, микро, нано<br>• Всё о кератине: плотность, температура, подбор<br>• Подготовка волос к наращиванию</p><p><strong>День 2 — практика</strong><br>• Микрокапсульное наращивание от начала до конца<br>• Постановка руки, натяжение, плотность, чистота<br>• Объём при минимуме прядей<br>• Финиш: стрижка, укладка, посадка длины<br>• Уход, коррекция, снятие без повреждений</p><p><strong>В результате:</strong><br>✓ Сертификат<br>✓ Чек-лист инструментов и брендов<br>✓ Поддержка после курса<br>✓ Уверенные навыки для первых клиентов</p><p><em>Ближайшие даты и стоимость — в Direct</em></p>',
+            'courses.card1.cta': 'Подробнее',
+            'courses.card2.image': 'Повышение квалификации для мастеров',
+            'courses.card2.title': 'Обучение и вдохновение',
+            'courses.card2.desc': '<p>Помимо практики, я обучаю мастеров в Риге и по всей Европе. Мои авторские курсы по наращиванию волос проходят в Латвии, а также на Мальте, Канарских островах и других европейских локациях.</p><p>Я делюсь не только техниками и опытом, но и философией профессии — вниманием к деталям, чувством вкуса, уверенностью и любовью к своему делу.</p><p>В 2025 году я достигла важной профессиональной вершины — стала судьёй на международном чемпионате по наращиванию волос Level Up Champion в Берлине. Этот опыт стал подтверждением моего экспертного уровня и глубокого понимания индустрии.</p><p>Мои ученицы уже строят собственные бренды, и уверенно развиваются в бьюти-сфере, вдохновляя других своим примером.</p>',
+            'courses.card2.cta': 'Подробнее',
+            'reviews.title': 'Отзывы',
+            'reviews.nav.prev': 'Назад',
+            'reviews.nav.next': 'Вперёд',
+            'results.title': 'Результаты учениц',
+            'results.card1.image': 'Bohdana — выпускница ST Community',
+            'results.card1.text': '<p>Прошла обучение в <strong>ST Community</strong>, где получила не только глубокие знания и уверенные практические навыки, но и вдохновение двигаться вперёд. Сейчас Bohdana работает в том же салоне, где проходила стажировку, и с теплотой вспоминает свои первые шаги.</p><p>Каждый день она чувствует, что занимается любимым делом, и благодарит команду ST Community за поддержку, атмосферу и возможность стать частью большого профессионального сообщества.</p>',
+            'results.card2.image': 'Alona — владелица салона после обучения',
+            'results.card2.text': '<p>Прошла обучение в <strong>ST Community</strong> и с первого дня влюбилась в профессию. Полученные знания и уверенность вдохновили её открыть собственный бьюти-салон, где она реализует себя как мастер и предприниматель.</p><p>Сегодня Alona с гордостью управляет своим делом, создаёт красоту с душой и вниманием к каждой детали, а её клиенты всегда уходят счастливыми и возвращаются снова.</p>'
+          },
+          en: {
+            'meta.title': 'ST Community — beauty salon and education',
+            'meta.description': 'ST Community — beauty salon and professional hair extension training.',
+            'brand.alt': 'ST Community logo',
+            'brand.name': 'ST Community',
+            'nav.home': 'Home',
+            'nav.path': 'My Journey',
+            'nav.courses': 'Courses',
+            'nav.reviews': 'Reviews',
+            'lang.label': 'Language switcher',
+            'lang.selector': 'Select website language',
+            'hero.badge': 'hair extension expert',
+            'hero.title': 'ST Community',
+            'hero.subtitle': 'Become the best among hair extension artists',
+            'hero.lead': 'I, <b>Svitlana Tishevska</b>, have spent 6+ years crafting flawless looks and transformations that help women feel confident, light, and beautiful—inside and out.',
+            'hero.card.title': 'What you gain:',
+            'hero.card.item1': 'a clear methodology and mentor support;',
+            'hero.card.item2': 'hands-on practice with real cases and image work;',
+            'hero.card.item3': 'a community of artists and personal brand growth.',
+            'hero.buttons.train': 'Training details',
+            'hero.buttons.reviews': 'Read reviews',
+            'hero.image.alt': 'Svitlana — hair extension master',
+            'courses.title': 'Overview',
+            'courses.feature.image': 'Interior of the ST Community salon',
+            'courses.feature.title': 'My salon is a place of power and inspiration',
+            'courses.feature.desc': '<p>I founded and manage my own beauty salon where every detail is thoughtfully designed.</p><p>Everything here is created with love: the atmosphere, service, comfort, and care for every guest.</p><p>My goal is for every woman who walks in to feel:</p><p>✨ “They truly care about me here.”</p>',
+            'courses.card1.image': 'Hair extension course for beginners',
+            'courses.card1.title': 'Hair Extension Course from Scratch',
+            'courses.card1.desc': '<p>2 days — theory plus practice on a model. Your new start in the profession.</p><p><strong>Day 1 — fundamentals & capsules</strong><br>• Hair types, quality, choosing suppliers<br>• Techniques: keratin bonds, tapes, micro, nano<br>• Essential tools without overpaying<br>• Client consultation and colour matching<br>• Three capsule formats: classic, micro, nano<br>• Keratin basics: density, temperature, selection<br>• Preparing natural hair for extensions</p><p><strong>Day 2 — practice</strong><br>• Micro-bond extensions from start to finish<br>• Hand positioning, tension, density, precision<br>• Creating volume with minimal strands<br>• Finish: blending haircut, styling, fitting the length<br>• Aftercare, maintenance, safe removal</p><p><strong>You will walk away with:</strong><br>✓ Certificate<br>✓ Checklist of tools and trusted brands<br>✓ Ongoing support after the course<br>✓ Confident skills for your first clients</p><p><em>Message me on Instagram for dates and pricing</em></p>',
+            'courses.card1.cta': 'Learn more',
+            'courses.card2.image': 'Advanced training for professionals',
+            'courses.card2.title': 'Education and inspiration',
+            'courses.card2.desc': '<p>Alongside client work I teach professionals in Riga and across Europe. My signature hair extension courses take place in Latvia, as well as Malta, the Canary Islands, and other European locations.</p><p>I share not only techniques and experience, but also the philosophy of the craft — attention to detail, taste, confidence, and love for what you do.</p><p>In 2025 I reached a major milestone by joining the Level Up Champion hair extension contest in Berlin as a judge. The experience confirmed my expertise and deep understanding of the industry.</p><p>My students are already building their own brands and growing steadily in the beauty field, inspiring others with their example.</p>',
+            'courses.card2.cta': 'Learn more',
+            'reviews.title': 'Reviews',
+            'reviews.nav.prev': 'Back',
+            'reviews.nav.next': 'Next',
+            'results.title': 'Student results',
+            'results.card1.image': 'Bohdana — ST Community graduate',
+            'results.card1.text': '<p>Bohdana completed her training at <strong>ST Community</strong>, gaining deep knowledge, confident hands-on skills, and motivation to move forward. She now works in the same salon where she trained and fondly remembers her first steps.</p><p>Every day she feels she is doing what she loves and thanks the ST Community team for their support, atmosphere, and the chance to be part of a strong professional family.</p>',
+            'results.card2.image': 'Alona — salon owner after training',
+            'results.card2.text': '<p>Alona studied at <strong>ST Community</strong> and fell in love with the profession from day one. The knowledge and confidence she gained inspired her to open her own beauty salon where she thrives as a stylist and entrepreneur.</p><p>Today she proudly runs her business, creates beauty with soul and attention to detail, and her clients leave happy and always return.</p>'
+          },
+          lv: {
+            'meta.title': 'ST Community — skaistumkopšanas salons un apmācība',
+            'meta.description': 'ST Community — skaistumkopšanas salons un profesionāla matu pieaudzēšanas apmācība.',
+            'brand.alt': 'ST Community logotips',
+            'brand.name': 'ST Community',
+            'nav.home': 'Sākums',
+            'nav.path': 'Mans ceļš',
+            'nav.courses': 'Kursi',
+            'nav.reviews': 'Atsauksmes',
+            'lang.label': 'Valodas izvēle',
+            'lang.selector': 'Izvēlēties lapas valodu',
+            'hero.badge': 'matu pieaudzēšanas eksperte',
+            'hero.title': 'ST Community',
+            'hero.subtitle': 'Kļūsti par labāko matu pieaudzēšanas meistaru',
+            'hero.lead': 'Es, <b>Svitlana Tishevska</b>, jau vairāk nekā 6 gadus veidoju nevainojamus tēlus un pārvērtības, palīdzot sievietēm sajust pārliecību, vieglumu un skaistumu — gan ārēji, gan iekšēji.',
+            'hero.card.title': 'Ko tu iegūsi:',
+            'hero.card.item1': 'skaidru metodiku un mentora atbalstu;',
+            'hero.card.item2': 'praksi ar reāliem uzdevumiem un tēlu veidošanu;',
+            'hero.card.item3': 'meistaru kopienu un zīmola attīstību.',
+            'hero.buttons.train': 'Apmācību informācija',
+            'hero.buttons.reviews': 'Skatīt atsauksmes',
+            'hero.image.alt': 'Svitlana — matu pieaudzēšanas meistare',
+            'courses.title': 'Pārskats',
+            'courses.feature.image': 'ST Community salona interjers',
+            'courses.feature.title': 'Mans salons — spēka un iedvesmas vieta',
+            'courses.feature.desc': '<p>Esmu sava skaistumkopšanas salona dibinātāja un īpašniece, kur katra detaļa ir pārdomāta līdz sīkumiem.</p><p>Šeit viss radīts ar mīlestību: atmosfēra, serviss, mājīgums un rūpes par katru viešņu.</p><p>Mans mērķis — lai katra sieviete, pārkāpjot slieksni, sajustu:</p><p>✨ “Par mani šeit patiesi rūpējas.”</p>',
+            'courses.card1.image': 'Matu pieaudzēšanas kurss iesācējiem',
+            'courses.card1.title': 'Matu pieaudzēšana no nulles',
+            'courses.card1.desc': '<p>2 dienas — teorija un prakse uz modeļa. Jauns starts profesijā.</p><p><strong>1. diena — pamati un kapsulas</strong><br>• Matu tipi, kvalitāte, piegādātāju izvēle<br>• Tehnikas: kapsulas, lentes, mikro, nano<br>• Meistara instrumenti bez liekām izmaksām<br>• Konsultācija klientam un krāsas piemeklēšana<br>• Trīs kapsulēšanas formāti: klasiskais, mikro, nano<br>• Viss par keratīnu: blīvums, temperatūra, izvēle<br>• Matu sagatavošana pieaudzēšanai</p><p><strong>2. diena — prakse</strong><br>• Mikro kapsulu pieaudzēšana no sākuma līdz beigām<br>• Roku pozīcija, spriegojums, blīvums, tīrība<br>• Tilpums ar minimālu šķipsnu daudzumu<br>• Noslēgums: griešana, ieveidošana, garuma pielāgošana<br>• Kopšana, korekcija un noņemšana bez bojājumiem</p><p><strong>Rezultātā saņemsi:</strong><br>✓ Sertifikātu<br>✓ Instrumentu un zīmolu kontrolsarakstu<br>✓ Atbalstu pēc kursa<br>✓ Pārliecinošas prasmes pirmajiem klientiem</p><p><em>Tuvākie datumi un cena — raksti Instagram Direct</em></p>',
+            'courses.card1.cta': 'Uzzināt vairāk',
+            'courses.card2.image': 'Profesionāļu kvalifikācijas paaugstināšana',
+            'courses.card2.title': 'Izglītība un iedvesma',
+            'courses.card2.desc': '<p>Paralēli darbam ar klientiem mācu meistarus Rīgā un visā Eiropā. Mani autorkursi par matu pieaudzēšanu notiek Latvijā, kā arī Maltā, Kanāriju salās un citās Eiropas vietās.</p><p>Dalos ne tikai ar tehnikām un pieredzi, bet arī ar profesijas filozofiju — uzmanību detaļām, gaumi, pārliecību un mīlestību pret savu darbu.</p><p>2025. gadā sasniedzu nozīmīgu virsotni — kļuvu par tiesnesi starptautiskajā matu pieaudzēšanas čempionātā Level Up Champion Berlīnē. Šī pieredze apstiprināja manu ekspertīzi un dziļu nozares izpratni.</p><p>Manas audzēknes jau veido savus zīmolus un pārliecinoši aug skaistumkopšanas jomā, iedvesmojot citus ar savu piemēru.</p>',
+            'courses.card2.cta': 'Uzzināt vairāk',
+            'reviews.title': 'Atsauksmes',
+            'reviews.nav.prev': 'Atpakaļ',
+            'reviews.nav.next': 'Uz priekšu',
+            'results.title': 'Audzēkņu rezultāti',
+            'results.card1.image': 'Bohdana — ST Community absolvente',
+            'results.card1.text': '<p>Bohdana pabeidza apmācību <strong>ST Community</strong>, iegūstot padziļinātas zināšanas, drošas praktiskās iemaņas un iedvesmu doties tālāk. Tagad viņa strādā tajā pašā salonā, kur izgāja praksi, un ar siltumu atceras savus pirmos soļus.</p><p>Katru dienu viņa jūt, ka dara savu sapņu darbu, un pateicas ST Community komandai par atbalstu, atmosfēru un iespēju būt daļai no profesionālas kopienas.</p>',
+            'results.card2.image': 'Alona — salona īpašniece pēc apmācības',
+            'results.card2.text': '<p>Alona mācījās <strong>ST Community</strong> un jau pirmajā dienā iemīlēja profesiju. Iegūtās zināšanas un pārliecība iedvesmoja viņu atvērt savu skaistumkopšanas salonu, kur viņa sevi realizē kā meistare un uzņēmēja.</p><p>Šodien viņa ar lepnumu vada savu biznesu, rada skaistumu ar dvēseli un uzmanību detaļām, un klientes vienmēr ir laimīgas un atgriežas.</p>'
+          }
+        };
+
+        const html = document.documentElement;
+        const langSelect = document.getElementById('langSelect');
+        const metaDescription = document.querySelector('meta[name="description"]');
+        const storageKey = 'stc-lang';
+
+        function resolve(dict, key){
+          if (!key) return undefined;
+          if (dict && Object.prototype.hasOwnProperty.call(dict, key)) {
+            return dict[key];
+          }
+          const fallback = translations.ru;
+          if (fallback && Object.prototype.hasOwnProperty.call(fallback, key)) {
+            return fallback[key];
+          }
+          return undefined;
+        }
+
+        function applyTranslations(lang){
+          const dict = translations[lang] || translations.ru;
+          html.setAttribute('lang', lang);
+          const titleValue = resolve(dict, 'meta.title');
+          if (titleValue) {
+            document.title = titleValue;
+          }
+          const descriptionValue = resolve(dict, 'meta.description');
+          if (metaDescription && descriptionValue) {
+            metaDescription.setAttribute('content', descriptionValue);
+          }
+
+          document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.dataset.i18n;
+            if (!key) return;
+            const attrSpec = el.dataset.i18nAttr ? el.dataset.i18nAttr.split(',') : [];
+            if (attrSpec.length) {
+              attrSpec.forEach(spec => {
+                if (!spec) return;
+                const [attrName, attrKey] = spec.split(':').map(part => part.trim());
+                if (!attrName) return;
+                const attrValue = resolve(dict, attrKey || key);
+                if (attrValue !== undefined) {
+                  el.setAttribute(attrName, attrValue);
+                }
+              });
+            }
+            const shouldSetText = !attrSpec.length || el.dataset.i18nText === 'true';
+            if (shouldSetText) {
+              const value = resolve(dict, key);
+              if (value !== undefined) {
+                el.innerHTML = value;
+              }
+            }
+          });
+
+          if (langSelect) {
+            langSelect.value = lang;
+          }
+        }
+
+        const storedLang = langSelect ? localStorage.getItem(storageKey) : null;
+        const initialLang = storedLang && translations[storedLang] ? storedLang : 'ru';
+        applyTranslations(initialLang);
+
+        langSelect?.addEventListener('change', event => {
+          const selected = event.target.value;
+          applyTranslations(selected);
+          try {
+            localStorage.setItem(storageKey, selected);
+          } catch (err) {
+            console.warn('Unable to save language preference', err);
+          }
+        });
+
         const track = document.getElementById('reviewsTrack');
         const prev = document.getElementById('revPrev');
         const next = document.getElementById('revNext');
+
         function scrollByStep(dir){
+          if (!track) return;
           const step = Math.min(track.clientWidth * 0.7, 500);
           track.scrollBy({left: dir * step, behavior: 'smooth'});
         }
-        prev?.addEventListener('click', ()=>scrollByStep(-1));
-        next?.addEventListener('click', ()=>scrollByStep(1));
+
+        prev?.addEventListener('click', () => scrollByStep(-1));
+        next?.addEventListener('click', () => scrollByStep(1));
 
         document.querySelectorAll('[data-scroll]')
           .forEach(btn => btn.addEventListener('click', () => {
             const target = btn.getAttribute('data-scroll');
             const node = target ? document.querySelector(target) : null;
-            if(node){
+            if (node) {
               node.scrollIntoView({behavior: 'smooth', block: 'start'});
             }
           }));
