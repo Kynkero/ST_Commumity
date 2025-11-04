@@ -1,0 +1,693 @@
+/* ==========================================================================
+   LongHair — Global Stylesheet
+   Author: Alex + ChatGPT
+   Purpose: Light theme with blue accents for hero, timeline, courses, reviews, results.
+   Structure:
+     1) CSS Reset & Base
+     2) Design Tokens (Variables)
+     3) Base Elements (html, body, typography helpers)
+     4) Layout / Page Chrome
+     5) Components (buttons, cards, etc.)
+     6) Sections
+        6.1 Hero
+        6.2 Timeline
+        6.3 Courses
+        6.4 Reviews
+        6.5 Results
+     7) Utilities
+     8) Media Queries
+   ========================================================================== */
+
+/* ========== 1) CSS Reset & Base ========== */
+/* A very light reset: normalize box sizing; remove default margins */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+/* ========== 2) Design Tokens (Variables) ========== */
+:root {
+  --bg: #f7f8fa;
+  --text: #222;
+  --muted: #6b7280;
+  --brand1: #161616;
+  --brand2: #000000;
+  --card: #fff;
+  --ring: 0 0 0 3px rgba(50, 50, 50, 0.3);
+  --shadow-sm: 0 4px 18px rgba(97, 97, 97, 0.756);
+  --shadow-card: 0 4px 25px rgba(0, 0, 0, .06);
+  --shadow-card-lg: 0 10px 30px rgba(0, 0, 0, .06);
+  --shadow-feature: 0 12px 36px rgba(52, 52, 52, 0.08), 0 6px 18px rgba(3,155,229,.06);
+}
+
+/* ========== 3) Base Elements ========== */
+body {
+  color: var(--text);
+  background: var(--bg);
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Headings that use the Playfair accent are defined inside sections */
+
+/* ========== 4) Layout / Page Chrome ========== */
+.page {
+  position: relative;
+  isolation: isolate;
+  min-height: 100dvh;
+  overflow: hidden;
+  background:
+    radial-gradient(1000px 600px at 20% 20%, rgba(79,195,247,.15), transparent 60%),
+    radial-gradient(900px 600px at 75% 35%, rgba(3,155,229,.12), transparent 70%),
+    var(--bg);
+}
+
+/* Top navigation */
+.nav {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px clamp(16px, 4vw, 40px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.brand span {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: #374151;
+}
+
+.menu {
+  display: flex;
+  gap: 24px;
+}
+
+.menu a {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--muted);
+  transition: color .2s ease;
+}
+
+.menu a:hover {
+  color: var(--brand2);
+}
+
+/* ========== 5) Components ========== */
+.btn {
+  appearance: none;
+  border: none;
+  border-radius: 14px;
+  padding: 12px 18px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(90deg, var(--brand2), var(--brand1));
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:focus {
+  outline: var(--ring);
+}
+
+.btn-ghost {
+  color: #2e2e2e;
+  background: #f0f2f5;
+  border: 1px solid #3030301b;
+}
+
+.card {
+  margin-top: 22px;
+  max-width: 720px;
+  padding: 16px 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: var(--shadow-card);
+}
+
+/* ========== 6) Sections ========== */
+
+/* --- 6.1 Hero --- */
+.hero {
+  position: relative;
+  z-index: 5;
+  padding: clamp(20px, 4vw, 40px);
+  padding-top: min(7vw, 52px);
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: min(5vw, 48px);
+  align-items: end;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--brand2);
+}
+
+.title {
+  margin: 8px 0 14px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  line-height: 1.05;
+  font-size: clamp(40px, 7.5vw, 110px);
+  background: linear-gradient(90deg, var(--brand1), var(--brand2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  font-size: clamp(18px, 2.2vw, 28px);
+  color: #2d3748;
+  opacity: .9;
+}
+
+.lead {
+  margin-top: 16px;
+  max-width: 60ch;
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.cta {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.figure {
+  position: relative;
+}
+
+.halo {
+  position: absolute;
+  left: 0;
+  right: 8%;
+  bottom: 14%;
+  height: 48%;
+  filter: blur(30px);
+  background:
+    radial-gradient(70% 65% at 55% 50%, rgba(3,155,229,.25), transparent 60%),
+    radial-gradient(70% 60% at 35% 40%, rgba(79,195,247,.25), transparent 65%);
+}
+
+.hero-img {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  margin-left: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,.1));
+}
+
+.image-note {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  padding: 6px 10px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  background: rgba(255, 255, 255, .9);
+  font-size: 12px;
+  color: #555;
+}
+
+/* --- 6.2 Timeline (3x3, 9:16) --- */
+.timeline {
+  position: relative;
+  z-index: 5;
+  padding: clamp(30px, 6vw, 60px) clamp(20px, 4vw, 40px);
+}
+
+.timeline-inner {
+  max-width: 1200px;
+  margin-inline: auto;
+  position: relative;
+}
+
+.timeline-title {
+  margin: 0 0 24px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  line-height: 1.05;
+  font-size: clamp(32px, 6vw, 88px);
+  background: linear-gradient(90deg, var(--brand1), var(--brand2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+.timeline-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px 36px;
+  text-align: center;
+}
+
+.tl-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tl-card {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: var(--shadow-card-lg);
+}
+
+.tl-card img {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  display: block;
+}
+
+.tl-caption {
+  padding: 14px 16px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  color: #1e293b;
+}
+
+/* --- 6.3 Courses --- */
+.courses {
+  position: relative;
+  z-index: 5;
+  padding: clamp(30px, 6vw, 60px) clamp(20px, 4vw, 40px);
+}
+
+.courses-inner {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.courses-title {
+  margin: 0 0 14px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  line-height: 1.05;
+  font-size: clamp(32px, 6vw, 88px);
+  background: linear-gradient(90deg, var(--brand1), var(--brand2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.courses-sub {
+  margin: 0 0 22px;
+  font-size: clamp(22px, 3vw, 42px);
+  color: #1f2937;
+}
+
+/* Feature course (big) */
+.course-feature {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 24px;
+  padding: 20px;
+  border: 1px solid #d8e9f6;
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: var(--shadow-feature);
+}
+
+.course-feature .thumb {
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.course-feature .thumb img {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  display: block;
+}
+
+.course-feature h3 {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+.course-feature .desc {
+  color: #374151;
+}
+
+.course-meta {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  color: #0a5a83;
+  font-weight: 700;
+}
+
+.course-actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Small course cards below feature */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.course-card {
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+}
+
+.course-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.course-card .body {
+  padding: 16px;
+}
+
+.course-card h4 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.course-card p {
+  margin: 0 0 14px;
+  color: #4b5563;
+}
+
+/* --- 6.4 Reviews --- */
+.reviews {
+  position: relative;
+  z-index: 5;
+  padding: clamp(30px, 6vw, 60px) clamp(20px, 4vw, 40px);
+}
+
+.reviews-inner {
+  position: relative;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.reviews-title {
+  margin: 0 0 24px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  line-height: 1.05;
+  font-size: clamp(32px, 6vw, 88px);
+  background: linear-gradient(90deg, var(--brand1), var(--brand2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+.reviews-viewport {
+  position: relative;
+}
+
+.reviews-track {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scroll-snap-type: x mandatory;
+}
+
+.reviews-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.reviews-track::-webkit-scrollbar-thumb {
+  background: #cfe7ff;
+  border-radius: 999px;
+}
+
+.rev-card {
+  flex: 0 0 auto;
+  padding: 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--shadow-card-lg);
+  scroll-snap-align: start;
+}
+
+.rev-card img {
+  width: 220px;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* arrows */
+.rev-nav {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.rev-btn {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  pointer-events: auto;
+  border: 1px solid #cfe7ff;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(3,155,229,.18);
+  cursor: pointer;
+}
+
+rev-btn:focus{ outline: var(--ring); }  # noqa keep outline for accessibility
+
+.rev-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: #039be5;
+  stroke-width: 2;
+}
+
+.rev-prev { left: -6px; }
+.rev-next { right: -6px; }
+
+/* --- 6.5 Results (image top, text bottom) --- */
+.results {
+  position: relative;
+  z-index: 5;
+  padding: clamp(30px, 6vw, 60px) clamp(20px, 4vw, 40px);
+}
+
+.results-inner {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.results-title {
+  margin: 0 0 22px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  line-height: 1.05;
+  font-size: clamp(32px, 6vw, 88px);
+  background: linear-gradient(90deg, var(--brand1), var(--brand2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Card variant different from courses */
+.result-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #ffffff, #f7fbff);
+}
+
+.result-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(79,195,247,.8), rgba(3,155,229,.25));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+.result-card img {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #e6f2fb;
+}
+
+.result-body {
+  padding: 16px 18px;
+}
+
+.result-name {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.result-text {
+  margin: 0;
+  color: #334155;
+}
+
+.result-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.result-tag {
+  padding: 6px 10px;
+  border: 1px solid #bae6fd;
+  border-radius: 999px;
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ========== 7) Utilities ========== */
+/* (Place small single-purpose helpers here if needed) */
+
+/* ========== 8) Media Queries ========== */
+@media (max-width: 980px) {
+  .menu { display: none; }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .figure { order: -1; }
+
+  .image-note {
+    top: auto;
+    bottom: -6px;
+  }
+
+  .timeline-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Courses */
+  .course-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Reviews: arrows tighter; images wider */
+  .rev-card img {
+    width: min(70vw, 320px);
+  }
+  .rev-prev { left: 6px; }
+  .rev-next { right: 6px; }
+
+  /* Results */
+  .results-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+}
