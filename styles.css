@@ -1,0 +1,6 @@
+:root{
+  --bg:#f7f8fa; --text:#222; --muted:#6b7280; --brand1:#4fc3f7; --brand2:#039be5; --card:#fff; --ring:0 0 0 3px rgba(3,155,229,.3);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;color:var(--text);background:var(--bg);font-family:Inter,system-ui,Arial,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
