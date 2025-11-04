@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LongHair — Герой + Мой путь</title>
+  <title>ST Community — салон красоты и обучение</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="page">
     <header class="nav">
-      <a class="brand" href="#">
-        <img src="png\logo.PNG" alt="LongHair Logo" />
-   
+      <a class="brand" href="#hero">
+        <img src="png/logo.PNG" alt="Логотип ST Community" />
+        <span>ST Community</span>
       </a>
       <nav class="menu">
         <a href="#hero">Главная</a>
@@ -26,19 +26,27 @@
 
     <section id="hero" class="hero">
       <div class="hero-inner">
-        <div>
+        <div class="hero-content">
+          <span class="hero-badge">эксперт по наращиванию волос</span>
           <h1 class="title">ST Community</h1>
           <p class="subtitle">Стань лучшей среди мастеров по наращиванию волос</p>
           <p class="lead">Я <b>Svitlana Tishevska</b> — Уже более 6 лет я создаю безупречные образы и преображения, помогая девушкам почувствовать уверенность, лёгкость и красоту — не только внешнюю, но и внутреннюю.</p>
-          <div class="card"><b>Что ты получишь:</b> ........</div>
+          <div class="card">
+            <b>Что ты получишь:</b>
+            <ul>
+              <li>чёткую методологию и поддержку наставника;</li>
+              <li>практику на реальных задачах и работу с образами;</li>
+              <li>сообщество мастеров и продвижение бренда.</li>
+            </ul>
+          </div>
           <div class="cta">
-            <button class="btn btn-primary">Записаться на обучение</button>
-            <button class="btn btn-ghost">Смотреть отзывы</button>
+            <button class="btn btn-primary" type="button" data-scroll="#courses">Записаться на обучение</button>
+            <button class="btn btn-ghost" type="button" data-scroll="#reviews">Смотреть отзывы</button>
           </div>
         </div>
         <div class="figure">
           <div class="halo" aria-hidden="true"></div>
-          <img class="hero-img" src="png\header.PNG" alt="Svitlana" />
+          <img class="hero-img" src="png/header.PNG" alt="Svitlana" />
         </div>
       </div>
     </section>
@@ -62,55 +70,55 @@
         <!-- <h3 class="courses-sub">и про мастер‑классы</h3> -->
 
         <!-- Большая карточка курса -->
-        <article class="course-feature">
-          <div class="thumb">
-            <img src="png\Line\2.jpg" alt="Курс ПроМасштаб" />
-          </div>
-          <div>
-            <h3>Мой салон — место силы и вдохновения</h3>
-            <p class="desc"><p>Я — основатель и владелица собственного бьюти-салона, где каждая деталь продумана до мелочей.</p>
-                            <p>Здесь всё создано с любовью: атмосфера, сервис, уют и внимание к каждой гостье.</p>
-
-                           <p> Моя цель — чтобы каждая женщина, переступив порог, почувствовала:</p>
-                            <p>✨ «Здесь обо мне действительно заботятся».</p>
-            <div class="course-meta">
-          </div>
-        </article>
-
-        <!-- Две карточки ниже -->
-        <div class="course-grid">
-          <article class="course-card">
-            <img src="png\Line\4.jpg" alt="Курс с нуля" />
-            <div class="body">
-              <h4>Моя профессия — моё призвание</h4>
-              <p>Я владею всеми современными техниками наращивания волос:<p>
- <p>• испанской,</p>
- <p>• итальянской,</p>
- <p>• голливудской,</p>
-<p> • ленточной.</p>
-
-<p>Каждый метод я подбираю индивидуально — с учётом структуры волос, желаемого результата и образа.</p>
-Для меня важно не просто «сделать красиво», а добиться естественного, изящного и гармоничного результата.</p>
-              <button class="btn btn-primary">Подробнее</button>
+          <article class="course-feature">
+            <div class="thumb">
+              <img src="png/Line/2.jpg" alt="Курс ПроМасштаб" />
+            </div>
+            <div class="feature-body">
+              <h3>Мой салон — место силы и вдохновения</h3>
+              <div class="desc">
+                <p>Я — основатель и владелица собственного бьюти-салона, где каждая деталь продумана до мелочей.</p>
+                <p>Здесь всё создано с любовью: атмосфера, сервис, уют и внимание к каждой гостье.</p>
+                <p>Моя цель — чтобы каждая женщина, переступив порог, почувствовала:</p>
+                <p>✨ «Здесь обо мне действительно заботятся».</p>
+              </div>
+              <div class="course-meta"></div>
             </div>
           </article>
 
-          <article class="course-card">
-            <img src="png\Line\3.jpg" alt="Повышение квалификации" />
-            <div class="body">
-              <h4>Обучение и вдохновение</h4>
-              <p>Помимо практики, я обучаю мастеров в Риге и по всей Европе.</p>
-Мои авторские курсы по наращиванию волос проходят в Латвии, а также на Мальте, Канарских островах и других европейских локациях.</p>
+          <!-- Две карточки ниже -->
+          <div class="course-grid">
+            <article class="course-card">
+              <img src="png/Line/4.jpg" alt="Курс с нуля" />
+              <div class="body">
+                <h4>Моя профессия — моё призвание</h4>
+                <div class="desc">
+                  <p>Я владею всеми современными техниками наращивания волос:</p>
+                  <ul>
+                    <li>испанской,</li>
+                    <li>итальянской,</li>
+                    <li>голливудской,</li>
+                    <li>ленточной.</li>
+                  </ul>
+                  <p>Каждый метод я подбираю индивидуально — с учётом структуры волос, желаемого результата и образа. Для меня важно не просто «сделать красиво», а добиться естественного, изящного и гармоничного результата.</p>
+                </div>
+                <button class="btn btn-primary">Подробнее</button>
+              </div>
+            </article>
 
-Я делюсь не только техниками и опытом, но и философией профессии — вниманием к деталям, чувством вкуса, уверенностью и любовью к своему делу.</p>
-
-В 2025 году я достигла важной профессиональной вершины — стала судьёй на международном чемпионате по наращиванию волос Level Up Champion в Берлине.</p>
-Этот опыт стал подтверждением моего экспертного уровня и глубокого понимания индустрии.</p>
-
-Мои ученицы уже строят собственные бренды, и уверенно развиваются в бьюти-сфере, вдохновляя других своим примером.</p>
-              <button class="btn btn-primary">Подробнее</button>
-            </div>
-          </article>
+            <article class="course-card">
+              <img src="png/Line/3.jpg" alt="Повышение квалификации" />
+              <div class="body">
+                <h4>Обучение и вдохновение</h4>
+                <div class="desc">
+                  <p>Помимо практики, я обучаю мастеров в Риге и по всей Европе. Мои авторские курсы по наращиванию волос проходят в Латвии, а также на Мальте, Канарских островах и других европейских локациях.</p>
+                  <p>Я делюсь не только техниками и опытом, но и философией профессии — вниманием к деталям, чувством вкуса, уверенностью и любовью к своему делу.</p>
+                  <p>В 2025 году я достигла важной профессиональной вершины — стала судьёй на международном чемпионате по наращиванию волос Level Up Champion в Берлине. Этот опыт стал подтверждением моего экспертного уровня и глубокого понимания индустрии.</p>
+                  <p>Мои ученицы уже строят собственные бренды, и уверенно развиваются в бьюти-сфере, вдохновляя других своим примером.</p>
+                </div>
+                <button class="btn btn-primary">Подробнее</button>
+              </div>
+            </article>
         </div>
       </div>
     </section>
@@ -121,18 +129,18 @@
       <div class="reviews-inner">
         <h2 class="reviews-title">Отзывы</h2>
         <div class="reviews-viewport">
-          <div class="reviews-track" id="reviewsTrack">
-            <!-- Замените источники на свои скриншоты отзывов -->
-            <div class="rev-card"><img src="png\reviews\1 (1).jpg" alt="Отзыв 1"></div>
-            <div class="rev-card"><img src="png\reviews\1 (2).jpg" alt="Отзыв 2"></div>
-            <div class="rev-card"><img src="png\reviews\1 (3).jpg" alt="Отзыв 3"></div>
-            <div class="rev-card"><img src="png\reviews\1 (4).jpg" alt="Отзыв 4"></div>
-            <div class="rev-card"><img src="png\reviews\1 (5).jpg" alt="Отзыв 5"></div>
-            <div class="rev-card"><img src="png\reviews\1 (6).jpg" alt="Отзыв 6"></div>
-            <div class="rev-card"><img src="png\reviews\1 (7).jpg" alt="Отзыв 7"></div>
-          </div>
-          <div class="rev-nav">
-            <button class="rev-btn rev-prev" aria-label="Назад" id="revPrev">
+            <div class="reviews-track" id="reviewsTrack">
+              <!-- Замените источники на свои скриншоты отзывов -->
+              <div class="rev-card"><img src="png/reviews/1 (1).jpg" alt="Отзыв 1"></div>
+              <div class="rev-card"><img src="png/reviews/1 (2).jpg" alt="Отзыв 2"></div>
+              <div class="rev-card"><img src="png/reviews/1 (3).jpg" alt="Отзыв 3"></div>
+              <div class="rev-card"><img src="png/reviews/1 (4).jpg" alt="Отзыв 4"></div>
+              <div class="rev-card"><img src="png/reviews/1 (5).jpg" alt="Отзыв 5"></div>
+              <div class="rev-card"><img src="png/reviews/1 (6).jpg" alt="Отзыв 6"></div>
+              <div class="rev-card"><img src="png/reviews/1 (7).jpg" alt="Отзыв 7"></div>
+            </div>
+            <div class="rev-nav">
+              <button class="rev-btn rev-prev" aria-label="Назад" id="revPrev">
               <svg viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
             </button>
             <button class="rev-btn rev-next" aria-label="Вперёд" id="revNext">
@@ -148,8 +156,8 @@
       <div class="results-inner">
         <h2 class="results-title">Результаты учениц</h2>
         <div class="results-grid">
-          <article class="result-card">
-            <img src="" alt="Светлана — 1 место" />
+            <article class="result-card">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 900'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23212123'/%3E%3Cstop offset='100%25' stop-color='%23363639'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='900' fill='url(%23g1)'/%3E%3Ctext x='50%25' y='50%25' fill='%23f5f5f5' font-family='Manrope,Arial,sans-serif' font-size='64' text-anchor='middle' dominant-baseline='middle'%3EФото%3C/text%3E%3C/svg%3E" alt="Светлана — 1 место" />
             <div class="result-body">
               <h4 class="result-name">Светлана Целюк</h4>
               <p class="result-text">Дважды проходила «Повышение квалификации», наставничество и курсы по наращиванию. Заняла 1 место на офлайн‑чемпионате в Москве и активно проводит обучения.</p>
@@ -160,8 +168,8 @@
             </div>
           </article>
 
-          <article class="result-card">
-            <img src="" alt="Ольга — чемпионат" />
+            <article class="result-card">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 900'%3E%3Cdefs%3E%3ClinearGradient id='g2' x1='1' y1='0' x2='0' y2='1'%3E%3Cstop offset='0%25' stop-color='%2326262a'/%3E%3Cstop offset='100%25' stop-color='%233b3b40'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='900' fill='url(%23g2)'/%3E%3Ctext x='50%25' y='50%25' fill='%23ededed' font-family='Manrope,Arial,sans-serif' font-size='64' text-anchor='middle' dominant-baseline='middle'%3EФото%3C/text%3E%3C/svg%3E" alt="Ольга — чемпионат" />
             <div class="result-body">
               <h4 class="result-name">Ольга Вал</h4>
               <p class="result-text">Мастер из Казахстана: онлайн‑курс «Повышение квалификации». 1 место на офлайн‑чемпионате и 2 место на международном первенстве в 2025 году.</p>
@@ -172,8 +180,8 @@
             </div>
           </article>
 
-          <article class="result-card">
-            <img src="" alt="Екатерина — призёр" />
+            <article class="result-card">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 900'%3E%3Cdefs%3E%3ClinearGradient id='g3' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0%25' stop-color='%232d2d31'/%3E%3Cstop offset='100%25' stop-color='%23424247'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='900' fill='url(%23g3)'/%3E%3Ctext x='50%25' y='50%25' fill='%23fafafa' font-family='Manrope,Arial,sans-serif' font-size='64' text-anchor='middle' dominant-baseline='middle'%3EФото%3C/text%3E%3C/svg%3E" alt="Екатерина — призёр" />
             <div class="result-body">
               <h4 class="result-name">Екатерина Максимович</h4>
               <p class="result-text">Проходила повышение квалификации. В составе сборной — призёр гранд‑при. Наняла ассистента и расширила спектр услуг студии.</p>
@@ -193,11 +201,20 @@
         const prev = document.getElementById('revPrev');
         const next = document.getElementById('revNext');
         function scrollByStep(dir){
-          const step = Math.min(track.clientWidth * 0.8, 600);
+          const step = Math.min(track.clientWidth * 0.7, 500);
           track.scrollBy({left: dir * step, behavior: 'smooth'});
         }
         prev?.addEventListener('click', ()=>scrollByStep(-1));
         next?.addEventListener('click', ()=>scrollByStep(1));
+
+        document.querySelectorAll('[data-scroll]')
+          .forEach(btn => btn.addEventListener('click', () => {
+            const target = btn.getAttribute('data-scroll');
+            const node = target ? document.querySelector(target) : null;
+            if(node){
+              node.scrollIntoView({behavior: 'smooth', block: 'start'});
+            }
+          }));
       })();
     </script>
 
