@@ -401,6 +401,7 @@ section {
   color: #f0f0f4;
   box-shadow: var(--glow-soft);
   transition: transform var(--transition), box-shadow var(--transition);
+  height: 100%;
 }
 
 .course-card:hover {
@@ -417,8 +418,10 @@ section {
 
 .course-card .body {
   padding: clamp(20px, 3vw, 32px);
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 18px;
+  flex: 1;
 }
 
 .course-card h4 {
@@ -430,6 +433,7 @@ section {
 .course-card .desc {
   color: rgba(232,232,240,0.78);
   font-size: 15px;
+  flex: 1;
 }
 
 .course-card .desc ul {
@@ -457,7 +461,8 @@ section {
 }
 
 .course-card .btn {
-  justify-self: start;
+  align-self: flex-start;
+  margin-top: auto;
 }
 
 /* ========== 6) Reviews ========== */
